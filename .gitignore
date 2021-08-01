@@ -1,0 +1,15 @@
+# Ignore everything:
+*
+
+
+#Except for these items
+!.gitignore
+!.gitattributes
+!README.md
+!/wp-content/
+!/wp-content/themes/
+!/wp-content/themes/csr-theme/
+!/wp-content/themes/csr-theme/**/*
+# !/wp-content/plugins/
+# !/wp-content/plugins/carrington/
+# !/wp-content/plugins/carrington/**/*
