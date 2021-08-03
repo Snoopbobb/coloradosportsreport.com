@@ -1031,11 +1031,11 @@ hr {
 	color: black;
 }
 
-.site-description {
+p.site-description {
 	color: black;
-	font-size: 30px;
-	font-weight: 700;
-	margin: 10px 0 0 0;
+	font-size: 1.8rem;
+	font-weight: 900;
+	margin: 10px 0;
 }
 
 .site-date {
@@ -1097,8 +1097,7 @@ hr {
 	overflow: hidden;
   	padding: 1rem;
   	max-width: 80%;
-  	margin: 0 auto;
-	margin-bottom: 40px;
+  	margin: 40px auto;
 }
 
 .support-story img {
