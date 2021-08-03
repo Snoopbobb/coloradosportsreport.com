@@ -1,7 +1,6 @@
 # Ignore everything:
 *
 
-
 #Except for these items
 !.gitignore
 !.gitattributes
@@ -13,3 +12,6 @@
 # !/wp-content/plugins/
 # !/wp-content/plugins/carrington/
 # !/wp-content/plugins/carrington/**/*
+
+node_modules/
+vendor/
