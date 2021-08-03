@@ -13,13 +13,13 @@
 	if ( has_post_thumbnail() ) {
 ?>
 		<article class="lead-story">
-			<a href="<?php esc_url( get_the_guid() ) ?>" rel="bookmark" target="_blank"><?php csr_theme_post_thumbnail(); ?></a>
+			<a href="<?php esc_url( get_permalink() ) ?>" rel="bookmark" target="_blank"><?php csr_theme_post_thumbnail(); ?></a>
 			<div>
 <?php
 				if ( is_singular() ) :
-					the_title( '<h1 class="entry-title"><a href="' . esc_url( get_the_guid() ) . '" rel="bookmark" target="_blank">', '</a></h1>' );
+					the_title( '<h1 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark" target="_blank">', '</a></h1>' );
 				else :
-					the_title( '<h2 class="entry-title"><a href="' . esc_url( get_the_guid() ) . '" rel="bookmark" target="_blank">', '</a></h2>' );
+					the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark" target="_blank">', '</a></h2>' );
 				endif;
 				csr_theme_posted_on();
 				the_excerpt();
@@ -45,9 +45,9 @@
 	<header class="entry-header">
 		<?php
 		if ( is_singular() ) :
-			the_title( '<h1 class="entry-title"><a href="' . esc_url( get_the_guid() ) . '" rel="bookmark" target="_blank">', '</a></h1>' );
+			the_title( '<h1 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark" target="_blank">', '</a></h1>' );
 		else :
-			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_the_guid() ) . '" rel="bookmark" target="_blank">', '</a></h2>' );
+			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark" target="_blank">', '</a></h2>' );
 		endif;
 
 		if ( 'post' === get_post_type() ) :
@@ -61,7 +61,7 @@
 		<?php endif; ?>
 	</header><!-- .entry-header -->
 
-	<a href="<?php esc_url( get_the_guid() ) ?>" rel="bookmark" target="_blank"><?php csr_theme_post_thumbnail(); ?></a>
+	<a href="<?php esc_url( get_permalink() ) ?>" rel="bookmark" target="_blank"><?php csr_theme_post_thumbnail(); ?></a>
 
 	<div class="entry-content">
 		<?php

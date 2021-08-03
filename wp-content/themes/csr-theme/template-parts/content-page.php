@@ -11,7 +11,7 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
-		<?php the_title( '<h1 class="entry-title"><a href="' . esc_url( get_the_guid() ) . '" rel="bookmark" target="_blank">', '</a></h1>' ); ?>
+		<?php the_title( '<h1 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark" target="_blank">', '</a></h1>' ); ?>
 	</header><!-- .entry-header -->
 
 	<?php csr_theme_post_thumbnail(); ?>
