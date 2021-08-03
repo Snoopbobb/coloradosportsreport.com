@@ -16,7 +16,7 @@
  *
  * @return void
  */
-function CSR_Theme_woocommerce_setup() {
+function csr_theme_woocommerce_setup() {
 	add_theme_support(
 		'woocommerce',
 		array(
@@ -42,7 +42,7 @@ add_action( 'after_setup_theme', 'csr_theme_woocommerce_setup' );
  *
  * @return void
  */
-function CSR_Theme_woocommerce_scripts() {
+function csr_theme_woocommerce_scripts() {
 	wp_enqueue_style( 'csr-theme-woocommerce-style', get_template_directory_uri() . '/woocommerce.css', array(), CSR_THEME_VERSION );
 
 	$font_path   = WC()->plugin_url() . '/assets/fonts/';
@@ -77,7 +77,7 @@ add_filter( 'woocommerce_enqueue_styles', '__return_empty_array' );
  * @param  array $classes CSS classes applied to the body tag.
  * @return array $classes modified to include 'woocommerce-active' class.
  */
-function CSR_Theme_woocommerce_active_body_class( $classes ) {
+function csr_theme_woocommerce_active_body_class( $classes ) {
 	$classes[] = 'woocommerce-active';
 
 	return $classes;
@@ -90,7 +90,7 @@ add_filter( 'body_class', 'csr_theme_woocommerce_active_body_class' );
  * @param array $args related products args.
  * @return array $args related products args.
  */
-function CSR_Theme_woocommerce_related_products_args( $args ) {
+function csr_theme_woocommerce_related_products_args( $args ) {
 	$defaults = array(
 		'posts_per_page' => 3,
 		'columns'        => 3,
@@ -116,7 +116,7 @@ if ( ! function_exists( 'csr_theme_woocommerce_wrapper_before' ) ) {
 	 *
 	 * @return void
 	 */
-	function CSR_Theme_woocommerce_wrapper_before() {
+	function csr_theme_woocommerce_wrapper_before() {
 		?>
 			<main id="primary" class="site-main">
 		<?php
@@ -132,7 +132,7 @@ if ( ! function_exists( 'csr_theme_woocommerce_wrapper_after' ) ) {
 	 *
 	 * @return void
 	 */
-	function CSR_Theme_woocommerce_wrapper_after() {
+	function csr_theme_woocommerce_wrapper_after() {
 		?>
 			</main><!-- #main -->
 		<?php
@@ -161,7 +161,7 @@ if ( ! function_exists( 'csr_theme_woocommerce_cart_link_fragment' ) ) {
 	 * @param array $fragments Fragments to refresh via AJAX.
 	 * @return array Fragments to refresh via AJAX.
 	 */
-	function CSR_Theme_woocommerce_cart_link_fragment( $fragments ) {
+	function csr_theme_woocommerce_cart_link_fragment( $fragments ) {
 		ob_start();
 		csr_theme_woocommerce_cart_link();
 		$fragments['a.cart-contents'] = ob_get_clean();
@@ -179,7 +179,7 @@ if ( ! function_exists( 'csr_theme_woocommerce_cart_link' ) ) {
 	 *
 	 * @return void
 	 */
-	function CSR_Theme_woocommerce_cart_link() {
+	function csr_theme_woocommerce_cart_link() {
 		?>
 		<a class="cart-contents" href="<?php echo esc_url( wc_get_cart_url() ); ?>" title="<?php esc_attr_e( 'View your shopping cart', 'csr-theme' ); ?>">
 			<?php
@@ -201,7 +201,7 @@ if ( ! function_exists( 'csr_theme_woocommerce_header_cart' ) ) {
 	 *
 	 * @return void
 	 */
-	function CSR_Theme_woocommerce_header_cart() {
+	function csr_theme_woocommerce_header_cart() {
 		if ( is_cart() ) {
 			$class = 'current-menu-item';
 		} else {

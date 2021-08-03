@@ -11,10 +11,10 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+		<?php the_title( '<h1 class="entry-title"><a href="' . esc_url( get_the_guid() ) . '" rel="bookmark" target="_blank">', '</a></h1>' ); ?>
 	</header><!-- .entry-header -->
 
-	<?php CSR-Theme_post_thumbnail(); ?>
+	<?php csr_theme_post_thumbnail(); ?>
 
 	<div class="entry-content">
 		<?php

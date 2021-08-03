@@ -16,7 +16,7 @@
  *
  * @uses CSR-Theme_header_style()
  */
-function CSR_Theme_custom_header_setup() {
+function csr_theme_custom_header_setup() {
 	add_theme_support(
 		'custom-header',
 		apply_filters(
@@ -40,7 +40,7 @@ if ( ! function_exists( 'csr_theme_header_style' ) ) :
 	 *
 	 * @see CSR-Theme_custom_header_setup().
 	 */
-	function CSR_Theme_header_style() {
+	function csr_theme_header_style() {
 		$header_text_color = get_header_textcolor();
 
 		/*

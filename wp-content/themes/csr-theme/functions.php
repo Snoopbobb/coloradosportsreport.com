@@ -20,7 +20,7 @@ if ( ! function_exists( 'csr_theme_setup' ) ) :
 	 * runs before the init hook. The init hook is too late for some features, such
 	 * as indicating support for post thumbnails.
 	 */
-	function CSR_Theme_setup() {
+	function csr_theme_setup() {
 		/*
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.
@@ -111,7 +111,7 @@ add_action( 'after_setup_theme', 'csr_theme_setup' );
  *
  * @global int $content_width
  */
-function CSR_Theme_content_width() {
+function csr_theme_content_width() {
 	$GLOBALS['content_width'] = apply_filters( 'csr_theme_content_width', 640 );
 }
 add_action( 'after_setup_theme', 'csr_theme_content_width', 0 );
@@ -121,7 +121,7 @@ add_action( 'after_setup_theme', 'csr_theme_content_width', 0 );
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
-function CSR_Theme_widgets_init() {
+function csr_theme_widgets_init() {
 	register_sidebar(
 		array(
 			'name'          => esc_html__( 'Sidebar', 'csr-theme' ),
@@ -139,11 +139,13 @@ add_action( 'widgets_init', 'csr_theme_widgets_init' );
 /**
  * Enqueue scripts and styles.
  */
-function CSR_Theme_scripts() {
+function csr_theme_scripts() {
 	wp_enqueue_style( 'csr-theme-style', get_stylesheet_uri(), array(), CSR_THEME_VERSION );
 	wp_style_add_data( 'csr-theme-style', 'rtl', 'replace' );
 
 	wp_enqueue_script( 'csr-theme-navigation', get_template_directory_uri() . '/js/navigation.js', array(), CSR_THEME_VERSION, true );
+
+	wp_enqueue_script( 'csr-theme-main', get_template_directory_uri() . '/js/main.js', array(), CSR_THEME_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

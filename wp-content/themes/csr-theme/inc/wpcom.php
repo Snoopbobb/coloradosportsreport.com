@@ -12,7 +12,7 @@
  *
  * @global array $themecolors
  */
-function CSR_Theme_wpcom_setup() {
+function csr_theme_wpcom_setup() {
 	global $themecolors;
 
 	// Set theme colors for third party services.
