@@ -1142,3 +1142,14 @@ p.site-description {
 		float: none;
 	}
 }
+
+@media only screen and (max-width: 600px) {
+	.lead-story img {
+
+		height: 330px;
+	}
+
+	.support-story img {
+		height: 330px;
+	}
+}
