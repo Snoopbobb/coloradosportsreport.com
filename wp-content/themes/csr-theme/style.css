@@ -1074,8 +1074,15 @@ p.site-description {
 .lead-story img {
 	width: auto;
   	height: 400px;
-  	float: left;
  	margin: 0 1rem 0 0;
+}
+
+.lead-story:nth-child(odd) img {
+	float: right;
+}
+
+.lead-story:nth-child(even) img {
+	float: left;
 }
 
 .lead-story h2 {
