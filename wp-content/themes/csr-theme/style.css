@@ -1078,6 +1078,10 @@ p.site-description {
  	margin: 0 1rem 0 0;
 }
 
+.lead-story:nth-child(odd) img {
+  	float: right;
+}
+
 .lead-story h2 {
 	font-size: 40px;
 	font-weight: 700;
@@ -1138,14 +1142,30 @@ p.site-description {
 }
 
 @media only screen and (max-width: 1200px) {
+	.lead-story, .support-story {
+		overflow: hidden;
+		max-width: 100%;
+		margin: 0 auto;
+	}
+	
 	.lead-story img {
 		float: none;
 	}
 }
 
 @media only screen and (max-width: 600px) {
-	.lead-story img {
+	.site-title {
+		font-size: 45px;
+	}
 
+	.lead-story {
+		overflow: hidden;
+		max-width: 100%;
+		margin: 0 auto;
+	}
+
+	.lead-story img {
+		float: none;
 		height: 330px;
 	}
 
