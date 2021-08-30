@@ -1078,7 +1078,7 @@ p.site-description {
  	margin: 0 1rem 0 0;
 }
 
-.lead-story:nth-child(odd) img {
+.lead-story:nth-child(even) img {
   	float: right;
 }
 
